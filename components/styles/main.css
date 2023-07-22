@@ -1,0 +1,94 @@
+:root {
+  --bg-color: #51274f;
+  --bg-gradient: linear-gradient(225deg, #51274f 0%, #784BA0 100%, #2B86C5 100%);
+  --bg-zaptalk: #1e1e1e;
+  --bg-main: #1e1e1e;
+  --bg-message-box: #50445991;
+  --bg-input-message: #494949;
+  --header: #757575;
+}
+
+body {
+background-color: var(--bg-color) ;
+background-image: var(--bg-gradient) no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100vw;
+overflow: hidden;
+margin: 0 auto;
+}
+
+
+.container-zaptalk {
+  width: 95%;
+  height: 98%;
+  border-radius: 5px;
+  background-color: var(--bg-zaptalk);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0px 0px 20px 2px black ;
+}
+
+
+
+.content-main {
+  background-color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid black;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: -2px 0px 7px 0px rgb(130, 129, 129) ;
+}
+
+.header-profile {
+  background-color: var(--header);
+  width: 100%;
+  height: 5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 90%;
+}
+
+.header-profile .face {
+  font-size: 3rem;
+}
+
+.header-profile .menu-main {
+  font-size: 3rem;
+}
+
+.message-box {
+  background-color: var(--bg-message-box);
+  width: 98%;
+  height: 75%;
+  box-shadow: 0px 0px 5px 0px rgb(95, 93, 93) ;
+
+}
+
+.sent-box {
+  background-color: var(--bg-input-message);
+  width: 98%;
+  height: 150px;
+  margin-bottom: 2rem;
+  box-shadow: 0px 0px 5px 0px rgb(95, 93, 93) ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 85%;
+}
+
+.sent-box .sent-icon {
+  font-size: 3rem;
+}
+
+.sent-box .anexo-icon {
+  font-size: 3rem;
+}
