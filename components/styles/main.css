@@ -10,7 +10,7 @@
 }
 
 body {
-background-color: var(--bg-color) ;
+background-color: var(--bg-color);
 background-image: var(--bg-gradient) no-repeat;
 display: flex;
 justify-content: center;
