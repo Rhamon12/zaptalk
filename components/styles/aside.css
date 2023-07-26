@@ -1,0 +1,155 @@
+
+
+.aside-header-profile {
+  background-color: var(--header);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  box-shadow: -2px 0px 7px 0px rgb(130, 129, 129);
+}
+
+.aside-header-profile .face {
+  font-size: 3rem;
+}
+.aside-header-profile .menu-main {
+  font-size: 2rem;
+}
+
+.fab {
+  position: fixed;
+  bottom: 10px;
+  left: 33%;
+}
+
+.fab button {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #cb60b3;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  color: white;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.fab button:focus {
+  outline: none;
+}
+
+.fab button.main {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #5b19b7;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.fab button.main:before {
+  content: "⏚";
+}
+
+.chat-cards {
+  width: 100%;
+  height: 90%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat {
+  border: 0.5px solid rgb(161, 160, 160);
+  width: 100%;
+  height: 12%;
+  background-color: rgba(181, 194, 194, 0.562);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chat:hover {
+  background-color: rgba(214, 212, 212, 0.671);
+}
+
+.chat .face {
+  font-size: 2.3rem;
+  margin-right: 0.5rem;
+  display: flex;
+  align-self: center;
+}
+
+.contact-name {
+  width: 80%;
+}
+
+.contact {
+  height: 15%;
+}
+
+.message {
+  width: 40ch;
+  margin-left: 3rem;
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status-message {
+  width: 20ch;
+  margin-left: 3rem;
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time {
+  font-size: 0.6rem;
+  margin-left: 90%;
+}
+
+.aside-new-talk {
+  width: 400px;
+  height: 80%;
+  border: none;
+  overflow: hidden;
+}
+
+.dialog-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog-title button {
+  height: 5%;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.dialog-title button:hover {
+  background-color: #5b19b7;
+  color: white;
+  border-radius: 5px;
+}
+
+.contact-list {
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  margin-bottom: 1.5rem;
+}
