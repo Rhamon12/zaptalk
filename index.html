@@ -12,7 +12,43 @@
   </head>
   <body>
     <div class="container-zaptalk">
-      <aside></aside>
+      <aside class="aside-container">
+        <div class="aside-header-profile">
+          <span class="material-symbols-outlined face"> face </span>
+          <span class="material-symbols-outlined menu-main"> menu </span>
+        </div>
+
+        <section class="chat-cards">
+          <div class="chat">
+            <span class="material-symbols-outlined face border-chat">face</span>
+            <span class="contact-name">Michael</span>
+            <span class="message border-chat">Hoje tem! kwjdnw ncwdnf dcmckdm cvkdmopsdmds  </span>
+            <span class="time">18:06</span>
+          </div>
+          <div class="chat">
+            <span class="material-symbols-outlined face border-chat">face</span>
+            <span class="contact-name">Ingrid</span>
+            <span class="message border-chat">Hoje tem! kwjdnw ncwdnf dcmckdm cvkdmopsdmds  </span>
+            <span class="time">22:06</span>
+          </div>
+        </section>
+
+        <dialog class="aside-new-talk">
+          <article class="dialog-title"><h3>New Chat</h3><button class="close-dialog-button">X</button></article>
+          <section class="contact-list">
+            <div class="chat contact">
+              <span class="material-symbols-outlined face border-chat">face</span>
+              <span class="contact-name">Ingrid</span>
+              <span class="message">Deus!</span>
+            </div>
+          </section>
+          <footer></footer>
+        </dialog>
+
+        <div class="fab">
+          <button class="main"></button>
+        </div>
+      </aside>
       <main class="content-main">
         <div class="header-profile">
           <span class="material-symbols-outlined face"> face </span>
@@ -27,6 +63,18 @@
         </div>
       </main>
     </div>
-    <script type="module" src="script.js"></script>
+
+    <template id="chat-template">
+      <div class="chat">
+        <span class="material-symbols-outlined face border-chat">face</span>
+        <span class="contact-name"></span>
+        <span class="message border-chat"></span>
+        <span class="time"></span>
+      </div>
+    </template>
+
+    <script type="module" src="./components/core/script.js"></script>
+    <script type="module" src="./components/core/modules/dialog-aside.js"></script>
   </body>
+
 </html>
