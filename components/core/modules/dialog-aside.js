@@ -32,3 +32,5 @@ buttonNewChat.onclick = function () {
 buttonCloseDialog.onclick = function () {
   modal.close();
 };
+
+console.log("Deu certo!");
