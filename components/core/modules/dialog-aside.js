@@ -33,8 +33,4 @@ buttonCloseDialog.onclick = function () {
   modal.close();
 };
 
-<<<<<<< HEAD
-export { buttonNewChat, modal, buttonCloseDialog, newContact, dataClient };
-=======
 console.log("Deu certo!");
->>>>>>> b7e84db48969cb3bed1811ec492abf1f6efc16c0
