@@ -1,36 +1,35 @@
-const buttonNewChat = document.querySelector(".fab");
+import { contactList, renderChatCard } from "./contacts.js";
+
+const buttonContactList = document.querySelector(".fab");
 const modal = document.querySelector(".aside-new-talk");
-const buttonCloseDialog = document.querySelector(".close-dialog-button");
-const newContact = document.querySelector(".chat");
+const buttonCloseContactList = document.querySelector(".close-dialog-button");
+const registerModal = document.querySelector(".dialog-contact-register");
+const newRegisterButton = document.querySelector(".dialog-title > h3");
+const closeRegisterModal = document.querySelector(".close-register-modal");
+const chatSection = document.querySelector(".contact-list");
 
-const dataClient = [
-  {
-    id: 1,
-    name: "Ingrid Costa",
-    status: "Deus!",
-  },
-  {
-    id: 2,
-    name: "Mikael Espinola",
-    status: "thunder!",
-  },
-  {
-    id: 3,
-    name: "Michael Costa",
-    status: "Walking to the moon!",
-  },
-  {
-    id: 4,
-    name: "Phill McGonagol",
-    status: "Avada Kedabra!",
-  },
-];
-
-buttonNewChat.onclick = function () {
+buttonContactList.onclick = function () {
   modal.showModal();
 };
-buttonCloseDialog.onclick = function () {
+buttonCloseContactList.onclick = function () {
   modal.close();
 };
 
-console.log("Deu certo!");
+newRegisterButton.onclick = function () {
+  registerModal.showModal();
+};
+
+closeRegisterModal.onclick = function () {
+  registerModal.close();
+};
+
+chatSection.addEventListener("click", (e) => {
+  if (e.target.classList.contains("contact")) {
+    const currentContact = e.target;
+    contactList.forEach((contact) => {
+      if (currentContact.id === contact.id) {
+        renderChatCard(contact);
+      }
+    });
+  }
+});
