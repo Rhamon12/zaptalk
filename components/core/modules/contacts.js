@@ -3,11 +3,11 @@ const chatCard = document.querySelector(".chat");
 const textButton = document.querySelector(".text-button");
 const text = document.querySelector(".texting");
 
-const names = ["Fulano", "Beltrano", "Sicrano", "Eevee", "Pikachu"];
+export const names = ["Fulano", "Beltrano", "Sicrano", "Eevee", "Pikachu"];
 
-const contactList = [];
+export const contactList = [];
 
-function createContact(name) {
+export function createContact(name) {
   const newContact = {
     id: uuidv4(),
     name,
