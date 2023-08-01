@@ -1,13 +1,19 @@
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+import { formatDateObject } from "./format-date.js";
+import { registerModal } from "./dialog-aside.js";
+
 const chatCards = document.querySelector(".chat-cards");
 const contactListSection = document.querySelector(".contact-list");
 const chat = document.querySelector(".chat");
-const textButton = document.querySelector(".text-button");
+const closeRegisterButtom = document.querySelector(".close-register-buttom");
 const text = document.querySelector(".texting");
 const text2 = document.querySelector(".texting-2");
 
 export const contactList = [];
 export const activeChats = [];
+
+const contactTest = "ingrid";
+createContact(contactTest);
 
 function createContact(name, status) {
   const newContact = {
@@ -15,23 +21,19 @@ function createContact(name, status) {
     name,
     status,
     selected: false,
+    open: false,
   };
 
   contactList.push(newContact);
-  contactList.forEach((contact) => {
-    renderContactList(contact);
-  });
+  renderContactList(newContact);
   return newContact;
 }
-
-contactList.forEach((contact) => {
-  renderContactList(contact);
-});
 
 export function renderChatCard(contact) {
   const newChatCard = document.createElement("div");
   newChatCard.classList.add("chat");
   newChatCard.setAttribute("id", contact.id);
+  // newChatCard.setAttribute("open", contact.open);
 
   const icon = document.createElement("span");
   icon.classList.add("material-symbols-outlined");
@@ -53,7 +55,7 @@ export function renderChatCard(contact) {
 
   const time = document.createElement("span");
   time.classList.add("time");
-  time.textContent = new Date();
+  time.textContent = formatDateObject(new Date());
   newChatCard.appendChild(time);
 
   chatCards.appendChild(newChatCard);
@@ -86,15 +88,14 @@ function renderContactList(contact) {
   contactListSection.appendChild(contactToList);
 }
 
-textButton.addEventListener("click", (e) => {
+closeRegisterButtom.addEventListener("click", (e) => {
   e.preventDefault();
   const name = text.value;
   const status = text2.value;
 
   createContact(name, status);
-  console.log(contactList);
 
   text.value = "";
-  text.focus();
   text2.value = "";
+  registerModal.close();
 });
