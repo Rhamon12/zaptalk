@@ -133,11 +133,21 @@
 .dialog-title {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .dialog-title h3 {
   cursor: pointer;
+  background-color: #955ce6;
+  transition: ease-in-out .3s;
+  padding: 1rem;
+  border-radius: 5px;
 }
+
+.dialog-title h3:hover {
+  background-color: #5b19b7;
+}
+
 
 .dialog-title button {
   height: 5%;
@@ -157,6 +167,7 @@
   height: 80%;
   border: none;
   overflow: hidden;
+  
 }
 
 .register {

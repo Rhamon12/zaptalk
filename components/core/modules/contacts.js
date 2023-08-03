@@ -1,4 +1,7 @@
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+import { saveContactStorage } from "./persist-storage.js";
+import { catchSelect } from "./catch-selected.js";
+
 const chatCards = document.querySelector(".chat-cards");
 const contactListSection = document.querySelector(".contact-list");
 const chat = document.querySelector(".chat");
@@ -9,7 +12,7 @@ const text2 = document.querySelector(".texting-2");
 export const contactList = [];
 export const activeChats = [];
 
-function createContact(name, status) {
+export function createContact(name, status) {
   const newContact = {
     id: uuidv4(),
     name,
@@ -18,15 +21,13 @@ function createContact(name, status) {
   };
 
   contactList.push(newContact);
+  saveContactStorage();
+
   contactList.forEach((contact) => {
     renderContactList(contact);
   });
   return newContact;
 }
-
-contactList.forEach((contact) => {
-  renderContactList(contact);
-});
 
 export function renderChatCard(contact) {
   const newChatCard = document.createElement("div");
@@ -57,6 +58,7 @@ export function renderChatCard(contact) {
   newChatCard.appendChild(time);
 
   chatCards.appendChild(newChatCard);
+  catchSelect();
 }
 
 function renderContactList(contact) {
@@ -92,7 +94,6 @@ textButton.addEventListener("click", (e) => {
   const status = text2.value;
 
   createContact(name, status);
-  console.log(contactList);
 
   text.value = "";
   text.focus();
