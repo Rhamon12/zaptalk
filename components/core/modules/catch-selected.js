@@ -7,7 +7,9 @@ export function catchSelect() {
   const chatCards = document.querySelectorAll(".chat");
   chatCards.forEach((chatCard) => {
     chatCard.addEventListener("click", () => {
-      selectedContact = contactList.find(({ id }) => id === chatCard.id);
+      console.log(
+        (selectedContact = contactList.find(({ id }) => id === chatCard.id))
+      );
     });
   });
 }

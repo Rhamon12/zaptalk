@@ -38,6 +38,5 @@ chatSection.addEventListener("click", (e) => {
       }
     });
   }
+  catchSelect();
 });
-
-catchSelect();
