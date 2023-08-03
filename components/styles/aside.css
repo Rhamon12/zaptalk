@@ -53,7 +53,7 @@
 }
 
 .fab button.main:before {
-  content: "⏚";
+  content: "+";
 }
 
 .chat-cards {
@@ -100,7 +100,6 @@
 .message {
   width: 40ch;
   margin-left: 3rem;
-  float: left;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -111,7 +110,6 @@
 .status-message {
   width: 20ch;
   margin-left: 3rem;
-  float: left;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -134,6 +132,13 @@
   display: flex;
   justify-content: space-between;
   
+}
+
+.dialog-title h3:hover {
+  background-color: #5b19b7;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 5px;
 }
 
 .dialog-title h3 {
