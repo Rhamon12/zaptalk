@@ -13,7 +13,7 @@ const text2 = document.querySelector(".texting-2");
 export const contactList = [];
 export const activeChats = [];
 
-const contactTest = "ingrid";
+const contactTest = "Gabi";
 createContact(contactTest);
 
 function createContact(name, status) {
@@ -21,6 +21,8 @@ function createContact(name, status) {
     id: uuidv4(),
     name,
     status,
+    time: formatDateObject(new Date()),
+    message: "Vamos renderizar isso por enquanto",
     selected: false,
     open: false,
   };
