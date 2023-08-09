@@ -1,5 +1,6 @@
 import { contactList, renderChatCard } from "./contacts.js";
 import { catchSelect } from "./catch-selected.js";
+import { saveContactStorage } from "./persist-storage.js";
 
 const buttonContactList = document.querySelector(".fab");
 const modal = document.querySelector(".aside-new-talk");

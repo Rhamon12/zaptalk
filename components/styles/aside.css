@@ -131,7 +131,6 @@
 .dialog-title {
   display: flex;
   justify-content: space-between;
-  
 }
 
 .dialog-title h3:hover {
@@ -144,17 +143,28 @@
 .dialog-title h3 {
   cursor: pointer;
   background-color: #955ce6;
-  transition: ease-in-out .3s;
-  padding: 1rem;
+  transition: ease-in-out 0.3s;
+  padding: 0.5rem;
+  margin: 5px;
+  margin-bottom: 15px;
   border-radius: 5px;
+  font-size: 15px;
 }
 
 .dialog-title h3:hover {
   background-color: #5b19b7;
 }
 
+.aside-header {
+  display: flex;
+  justify-content: space-between;
+}
 
-.dialog-title button {
+.aside-header h1 {
+  margin-bottom: 2px;
+}
+
+.aside-header button {
   height: 5%;
   cursor: pointer;
   background: none;
@@ -172,7 +182,6 @@
   height: 80%;
   border: none;
   overflow: hidden;
-  
 }
 
 .register {
