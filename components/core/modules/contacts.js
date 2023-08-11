@@ -22,7 +22,6 @@ function createContact(name, status) {
     name,
     status,
     time: formatDateObject(new Date()),
-    message: "Vamos renderizar isso por enquanto",
     selected: false,
     open: false,
   };
