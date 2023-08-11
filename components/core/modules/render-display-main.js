@@ -10,8 +10,9 @@
 </div> */
 
 import { contactList } from "./contacts.js";
+import { contactMessages } from "./conversation.js";
 
-export function renderFriendContact(name, message, time) {
+export function renderFriendContact(contact) {
   const contentMessage = document.querySelector(".content-message");
 
   let divBoxFriend = document.createElement("div");
@@ -27,17 +28,19 @@ export function renderFriendContact(name, message, time) {
 
   let nameFriend = document.createElement("em");
   nameFriend.classList.add("name");
-  nameFriend.textContent = name.name;
+  nameFriend.textContent = contact.name;
   divBoxFriend.appendChild(nameFriend);
+
+  let messages = contactMessages[contact.id];
 
   let conversationFriend = document.createElement("p");
   conversationFriend.classList.add("conversation-profile");
-  conversationFriend.textContent = message.message;
+  conversationFriend.textContent = messages[messages.length - 1].content;
   divBoxFriend.appendChild(conversationFriend);
 
   let spanConversation = document.createElement("span");
   spanConversation.classList.add("time");
-  spanConversation.textContent = time.time;
+  spanConversation.textContent = contact.time;
   conversationFriend.appendChild(spanConversation);
 
   // if (contentMessage.children.length > 1) {
